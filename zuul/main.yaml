@@ -12,3 +12,6 @@
       github.com:
         config-projects:
           - pabelanger/windmill-config
+      review.openstack.org:
+        untrusted-projects:
+          - openstack-dev/sandbox
