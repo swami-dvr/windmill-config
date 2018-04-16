@@ -1,0 +1,26 @@
+- pipeline:
+    name: check
+    description: |
+      Newly uploaded patchsets enter this pipeline to receive an
+      initial +/-1 Verified vote.
+    failure-message: |
+      Build failed (check pipeline).  For information on how to proceed, see
+      http://docs.openstack.org/infra/manual/developers.html#automated-testing
+    manager: independent
+    require:
+      review.openstack.org:
+        open: True
+        current-patchset: True
+    trigger:
+      review.openstack.org:
+        - event: patchset-created
+        - event: change-restored
+        - event: comment-added
+          comment: (?i)^(Patch Set [0-9]+:)?( [\w\\+-]*)*(\n\n)?\s*recheck
+    success:
+      review.openstack.org:
+        # Note that gerrit keywords are case-sensitive.
+        Verified: 1
+    failure:
+      review.openstack.org:
+        Verified: -1
