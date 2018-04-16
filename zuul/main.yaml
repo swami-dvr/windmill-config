@@ -9,3 +9,6 @@
           - zuul-base-jobs
         untrusted-projects:
           - zuul-jobs
+      github.com:
+        config-projects:
+          - pabelanger/windmill-config
