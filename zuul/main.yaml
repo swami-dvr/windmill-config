@@ -4,14 +4,10 @@
 - tenant:
     name: openstack
     source:
-      git.zuul-ci.org:
-        config-projects:
-          - zuul-base-jobs
-        untrusted-projects:
-          - zuul-jobs
       github.com:
         config-projects:
           - pabelanger/windmill-config
       review.openstack.org:
         untrusted-projects:
+          - openstack-infra/zuul-jobs
           - openstack-dev/sandbox
