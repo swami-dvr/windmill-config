@@ -8,9 +8,9 @@
         config-projects:
           - pabelanger/windmill-config
         untrusted-projects:
-          - pabelanger/windmill-jobs:
-              shadow: openstack-infra/zuul-jobs
+          - pabelanger/windmill-jobs
       review.openstack.org:
         untrusted-projects:
           - openstack-infra/zuul-jobs
+              shadow: pabelanger/zuul-jobs
           - openstack-dev/sandbox
