@@ -1,7 +1,15 @@
 - hosts: localhost
+  vars:
+    zuul_log_url: "http://logs.example.org"
   roles:
-    - role: emit-job-header
-      zuul_log_url: "http://logs.example.org"
+    - emit-job-header
+
+  tasks:
+    - name: Return log URL to Zuul
+      zuul_return:
+        data:
+          zuul:
+            log_url: "{{ zuul_log_url }}/{{ zuul_log_path }}/"
 
 - hosts: all
   pre_tasks:
