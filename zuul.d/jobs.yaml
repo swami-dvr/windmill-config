@@ -11,7 +11,7 @@
     post-run: playbooks/base/post-ssh.yaml
     roles:
       - zuul: openstack-infra/zuul-jobs
-      - zuul: openstack-infra/windmill-jobs
+      - zuul: pabelanger/windmill-jobs
     timeout: 1800
     nodeset:
       nodes:
@@ -28,7 +28,7 @@
     post-run: playbooks/base-test/post-ssh.yaml
     roles:
       - zuul: openstack-infra/zuul-jobs
-      - zuul: openstack-infra/windmill-jobs
+      - zuul: pabelanger/windmill-jobs
     timeout: 1800
     nodeset:
       nodes:
