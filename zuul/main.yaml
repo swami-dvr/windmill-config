@@ -4,13 +4,13 @@
 - tenant:
     name: openstack
     source:
+      review.openstack.org:
+        untrusted-projects:
+          - openstack-infra/zuul-jobs:
+              shadow: pabelanger/windmill-jobs
+          - openstack-dev/sandbox
       github.com:
         config-projects:
           - pabelanger/windmill-config
         untrusted-projects:
-          - pabelanger/windmill-jobs:
-              shadow: openstack-infra/zuul-jobs
-      review.openstack.org:
-        untrusted-projects:
-          - openstack-infra/zuul-jobs
-          - openstack-dev/sandbox
+          - pabelanger/windmill-jobs
