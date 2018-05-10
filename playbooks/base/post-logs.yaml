@@ -1,4 +1,4 @@
 - hosts: localhost
   roles:
     - role: upload-logs
-      zuul_log_url: /opt/logs
+      zuul_log_url: http://162.253.55.78/logs
