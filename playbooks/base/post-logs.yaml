@@ -1,4 +1,7 @@
 - hosts: localhost
+  roles: ara-report
+
+- hosts: localhost
   roles:
     - role: upload-logs
       zuul_log_url: http://162.253.55.78/logs
