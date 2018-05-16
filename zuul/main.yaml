@@ -6,11 +6,8 @@
     source:
       review.openstack.org:
         untrusted-projects:
-          - openstack-infra/zuul-jobs:
-              shadow: pabelanger/windmill-jobs
+          - openstack-infra/zuul-jobs
           - openstack-dev/sandbox
       github.com:
         config-projects:
           - pabelanger/windmill-config
-        untrusted-projects:
-          - pabelanger/windmill-jobs
