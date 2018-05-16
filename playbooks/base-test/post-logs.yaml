@@ -1,0 +1,12 @@
+- hosts: localhost
+  roles:
+    - role: add-fileserver
+      fileserver: "{{ site_logs }}"
+    - role: ara-report
+
+- hosts: "{{ site_logs.fqdn }}"
+  gather_facts: false
+  roles:
+    - role: upload-logs
+      zuul_log_url: http://162.253.55.201/logs/windmill
+      zuul_logserver_root: "{{ site_logs.path }}"
