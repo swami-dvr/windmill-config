@@ -8,4 +8,4 @@
   gather_facts: false
   roles:
     - role: upload-logs
-      zuul_log_url: http://162.253.55.78/logs/windmill
+      zuul_log_url: http://162.253.55.201/logs/windmill
