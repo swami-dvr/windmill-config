@@ -12,7 +12,7 @@
       - playbooks/base/post-ssh.yaml
       - playbooks/base/post-logs.yaml
     roles:
-      - zuul: openstack-infra/zuul-jobs
+      - zuul: zuul-jobs
       - zuul: openstack-infra/windmill-jobs
     vars:
       ara_compress_html: false
@@ -36,7 +36,7 @@
       - playbooks/base/post-ssh.yaml
       - playbooks/base/post-logs.yaml
     roles:
-      - zuul: openstack-infra/zuul-jobs
+      - zuul: zuul-jobs
       - zuul: openstack-infra/windmill-jobs
     vars:
       ara_compress_html: false

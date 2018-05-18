@@ -6,8 +6,10 @@
     source:
       review.openstack.org:
         untrusted-projects:
-          - openstack-infra/zuul-jobs
           - openstack-dev/sandbox
       github.com:
         config-projects:
           - pabelanger/windmill-config
+      git.zuul-ci.org:
+        untrusted-projects:
+          - zuul-jobs
