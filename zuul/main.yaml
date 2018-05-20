@@ -10,6 +10,8 @@
       github.com:
         config-projects:
           - pabelanger/windmill-config
+        untrusted-projects:
+          - pabelanger/windmill-jobs
       git.zuul-ci.org:
         untrusted-projects:
           - zuul-jobs
