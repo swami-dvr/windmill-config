@@ -1,0 +1,12 @@
+cache:
+  expiration:
+    server: 5
+    port: 5
+clouds:
+  vexxhost:
+    region_name: ca-ymq-1
+    profile: vexxhost
+    auth:
+      password: eonismanuran921
+      project_name: yvr-summit-13
+      username: yvr-summit-13
